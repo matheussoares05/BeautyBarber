@@ -1,0 +1,335 @@
+
+:root {
+    --primary: #4b4040;    
+    --secondary: #333;      
+    --accent: #FFD700;      
+    --bg-light: #f8f9fa;
+    --text-dark: #222;
+    --text-light: #fff;
+    --font-main: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: url('backgound/c8fa4524d664b7c282b7b1c54b851999.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+/* Overlay escuro para contraste */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+
+/* === NAVEGAÇÃO === */
+/* === NAVEGAÇÃO === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* BOTÕES DO MENU */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent);
+    z-index: -1;
+    transition: left 0.4s ease;
+}
+
+.nav-links a:hover::before {
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: var(--secondary);
+}
+
+/* ÍCONE MENU MOBILE */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+/* MENU RESPONSIVO */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--secondary);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+/* === HERO === */
+header.hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(64, 0, 0, 0.6)),
+                url('barbearia-banner.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+}
+
+header.hero h1 {
+    font-size: 3rem;
+    color: var(--accent);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+header.hero p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+header.hero img {
+    width: 320px;
+    border: 4px solid var(--accent);
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* === SEÇÕES === */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+section.about, section.services, section.contact {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+section.benefits {
+    background-color: rgba(245, 245, 245, 0.95);
+}
+
+section.about ul li,
+section.benefits ul li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #444;
+}
+
+/* === SERVIÇOS === */
+.service-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.service-item p {
+    color: #555;
+}
+
+.service-item:hover {
+    transform: scale(1.03);
+}
+
+/* === DEPOIMENTO === */
+section.benefits blockquote {
+    font-style: italic;
+    color: #111;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-left: 5px solid var(--primary);
+    margin-top: 2rem;
+    display: inline-block;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === CONTATO === */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #660000;
+}
+
+/* === RODAPÉ === */
+footer.info {
+    background-color: var(--secondary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+}
+
+footer.info a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+footer.info a:hover {
+    text-decoration: underline;
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--secondary);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .service-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header.hero img {
+        width: 180px;
+    }
+}

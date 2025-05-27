@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia BeautyBarber - Estilo e Tradição</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="logo">BeautyBarber</div>
+        <div class="menu-icon" id="menu-icon">
+            <span>&#9776;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#benefits">Vantagens</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero / Banner -->
+    <header id="hero" class="hero">
+        <h1>Estilo e Tradição com BeautyBarber</h1>
+        <p>Transforme seu visual com cortes modernos e atendimento de primeira.</p>
+        <div class="header-images">
+            <img src="imagens/photo-1585747860715-2ba37e788b70.jpeg" alt="imagem 1">
+            <img src="imagens/depositphotos_116811984-stock-photo-hipster-client-visiting-barber-shop.jpg" alt="Cliente recebendo atendimento">
+            <img src="imagens/photo-1596728325488-58c87691e9af.jpeg" alt="Interior da barbearia">
+        </div>
+    </header>
+
+    <!-- Sobre -->
+    <section id="about" class="about">
+        <h2>Sobre Nós</h2>
+        <p>Somos a Barbearia BeautyBarber, referência em cortes masculinos, barba e estilo. Unimos tradição com tendências modernas para oferecer uma experiência única.</p>
+        <p>Nossa missão é destacar sua personalidade através do visual.</p>
+        <ul>
+            <li><strong>Profissionalismo:</strong> Equipe especializada e atualizada.</li>
+            <li><strong>Ambiente Acolhedor:</strong> Conforto, café e boa música.</li>
+            <li><strong>Atendimento Personalizado:</strong> Cada cliente é único.</li>
+        </ul>
+        <p>Venha viver a experiência BeautyBarber!</p>
+    </section>
+
+    <!-- Serviços -->
+    <section id="services" class="services">
+        <h2>Nossos Serviços</h2>
+        <div class="service-items">
+            <div class="service-item">
+                <h3>Corte Masculino</h3>
+                <p>Do clássico ao moderno, com acabamento perfeito.</p>
+            </div>
+            <div class="service-item">
+                <h3>Barba & Navalha</h3>
+                <p>Barba desenhada e relaxamento com toalha quente.</p>
+            </div>
+            <div class="service-item">
+                <h3>Pacotes de Estilo</h3>
+                <p>Combos especiais para manter o visual sempre em dia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vantagens -->
+    <section id="benefits" class="benefits">
+        <h2>Por Que Escolher a BeautyBarber?</h2>
+        <ul>
+            <li>Profissionais com anos de experiência</li>
+            <li>Ambiente estiloso e confortável</li>
+            <li>Agendamento rápido e fácil</li>
+        </ul>
+        <blockquote>"Ir na BeautyBarber é mais do que cortar o cabelo. É viver uma experiência de respeito e estilo."</blockquote>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="contact">
+        <h2>Agende Seu Horário</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="info">
+        <p>Telefone: (11) 9901-8888</p>
+        <p>Instagram: <a href="https://instagram.com/heathnickbarber" target="_blank">@BeautyBarber331</a></p>
+        <p>Email: BeautyBarber@gmail.com</p>
+        <p>&copy; 2024 Barbearia BeautyBarber. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script menu mobile -->
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
